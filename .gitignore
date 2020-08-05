@@ -1,0 +1,5 @@
+.DS_Store
+lcr.egg-info
+__pycache__
+Loudness_Correction.egg-info
+.vscode
