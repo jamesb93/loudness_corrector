@@ -1,6 +1,5 @@
 # http://k.ylo.ph/2016/04/04/loudnorm.html
 import argparse
-import ffmpeg
 import json
 from subprocess import run, PIPE
 from pathlib import Path
@@ -59,6 +58,10 @@ def process(input_file, integrated, lra, true_peak_max, sample_rate):
     ]
     run(second_pass_cmd)
 
-if __name__ == "__main__":
+def do():
     for x in args.i:
         process(x, args.t, args.r, args.tp, args.sr)
+
+if __name__ == "__main__":
+    do()
+
