@@ -58,10 +58,8 @@ def process(input_file, integrated, lra, true_peak_max, sample_rate):
     ]
     run(second_pass_cmd)
 
-def do():
-    for x in args.i:
-        process(x, args.t, args.r, args.tp, args.sr)
 
 if __name__ == "__main__":
-    do()
+    for x in args.i:
+        process(x, args.t, args.r, args.tp, args.sr)
 

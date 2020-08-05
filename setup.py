@@ -8,7 +8,7 @@ setup(
     description="Automatic loudness correction.",
     entry_points={
         "console_scripts": [
-            "lcr = correct.do"
+            "lcr = correct.main"
         ]
     }
 )
