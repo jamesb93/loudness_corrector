@@ -15,7 +15,7 @@ task buildRelease, "Builds with -d:release and -d:danger":
 
 #Manual installRelease
 task installRelease, "Builds with -d:release and -d:danger and installs it in ~/.nimble/bin":
-    exec "nimble install --passNim:-d:release --passNim:--threads:on --passNim:-d:danger --passNim:--opt:speed"
+    exec "nimble install --passNim:-d:release --passNim:-d:danger --passNim:--opt:speed"
 
 #Manual buildDebug
 task buildDebug, "Builds without any optimisations and full stack traces":
