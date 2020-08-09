@@ -15,10 +15,13 @@ proc entry*(input: seq[string],
     if input.len() == 0:
         echo "Please provide one or more files to process.".bold.fgRed
     for p in input: # iterate overa ll files
-
-        if verbose: echo fmt"{p.splitFile().name}".fgYellow
+        var pathComponents = p.splitFile()
+        var dir = pathComponents.dir
+        var name = pathComponents.name
+        var ext = pathComponents.ext
+        if verbose: echo fmt"{name}".fgYellow
         var inFile = fmt("'{p}'")
-        var outFile = joinPath(p.splitFile().dir, fmt"'{p.splitFile().name}_corrected.wav'")
+        var outFile = joinPath(dir, fmt"'{name}_corrected.wav'")
         
         var firstPassCmd = fmt("ffmpeg -i {inFile} -filter:a loudnorm=I={targetLUFS}:LRA={targetRange}:TP={truePeak}:print_format=json -f null -")
         var firstPass = osproc.execProcess(firstPassCmd).splitLines()
