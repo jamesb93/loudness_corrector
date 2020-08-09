@@ -50,7 +50,7 @@ when isMainModule:
             "targetRange" : 'r',
             "truePeak" : 'p',
             "sampleRate" : 's',
-            "verbose" : 'q'
+            "verbose" : 'v',
         },
         help = {
             "input" : "Multiple files or a single file to process",
@@ -58,5 +58,5 @@ when isMainModule:
             "targetRange" : "Target range",
             "truePeak" : "Maximum true peak",
             "sampleRate" : "Output sampling rate",
-            "verbose" : "Do you want me to tell you what im thinking?"
+            "verbose" : "Do you want me to tell you what im thinking?",
         })
