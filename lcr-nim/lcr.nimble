@@ -8,6 +8,7 @@ bin    = @["lcr"]
 
 requires "nim >= 1.2.4"
 requires "cligen"
+requires "colorize"
 
 #Manual buildRelease
 task buildRelease, "Builds with -d:release and -d:danger":
